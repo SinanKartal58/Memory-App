@@ -1,0 +1,23 @@
+.result {
+  display: grid; place-items: center; min-height: 100vh; padding: 24px;
+  background: var(--result-background); color: var(--result-color);
+  text-align: center;
+  &--code { --result-background: #292b2a; --result-color: #57d2bb; }
+  &--games { --result-background: #264d5f; --result-color: #ef1685; }
+  &--projects { --result-background: #217391; --result-color: #fa563a; }
+  &--food { --result-background: #f6882c; --result-color: white; }
+  &--winner.result--food { --result-background: #f4f4f4; --result-color: #e17a28; }
+  &__content { width: min(100%, 500px); }
+  h1 { margin: 10px 0; font-size: clamp(42px, 7vw, 78px); line-height: 1.05; }
+  p { color: inherit; }
+  &__symbol { margin: 16px 0; font-size: clamp(70px, 12vw, 120px); line-height: 1; }
+  &__actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+  &__button {
+    min-height: 40px; padding: 8px 14px; border: 1px solid currentColor;
+    background: transparent; color: inherit; font-weight: 700;
+    &:hover { background: #ffffff20; }
+  }
+  &__button--secondary { opacity: .8; }
+  &--code .text--blue, &--games .text--blue, &--projects .text--blue { color: #70ceff; }
+  &--code .text--orange, &--games .text--orange, &--projects .text--orange { color: #ffad68; }
+}
